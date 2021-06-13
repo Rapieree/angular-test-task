@@ -51,7 +51,7 @@ export class DataNotesService {
 
     if (this._notesItems.length !== 0) {
       uniqueId = this._notesItems.reduce((max, current) => {
-        if(max.id > current.id) {
+        if (max.id > current.id) {
           return max;
         }
         return current;
@@ -70,15 +70,15 @@ export class DataNotesService {
       return note.id === id;
     });
 
-    if(note !== undefined) {
-      return Object.assign({}, note);
+    if (note !== undefined) {
+      return note;
     } else {
       throw new Error('Error getting note. Note not found');
     }
   };
 
   addNote(noteItem: NoteItem) {
-    const note : NoteItem = {
+    const note: NoteItem = {
       id: this.getUniqueId(),
       title: noteItem.title,
       content: noteItem.content,
@@ -102,11 +102,7 @@ export class DataNotesService {
   editNote(id: number, noteItem: NoteItem) {
     let note = this.getNoteById(id);
 
-    if (note === undefined) {
-      throw Error('Error edit. Note not found.')
-    } else {
-      note.title = noteItem.title;
-      note.content = noteItem.content;
-    }
+    note.title = noteItem.title;
+    note.content = noteItem.content;
   }
 }

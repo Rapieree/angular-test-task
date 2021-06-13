@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NoteItem, DataNotesService } from '../data-notes.service';
 
 @Component({
@@ -9,7 +9,6 @@ export class NoteListComponent implements OnInit {
   noteDataItems: NoteItem[] = [];
 
   constructor(private dataNotesService: DataNotesService) { }
-
 
   ngOnInit() {
      this.noteDataItems = this.dataNotesService.notesItems;
