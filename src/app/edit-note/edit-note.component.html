@@ -1,0 +1,20 @@
+<div class="edit-note">
+  <a class="edit-note__back-link nav-link" routerLink="/">Назад</a>
+
+  <form #editNoteForm="ngForm" (ngSubmit)="saveNote()">
+    <label>Запись: {{editNoteItem.title}}</label>
+    <input type="text" name="title" required minlength="2" [(ngModel)]="editNoteItem.title">
+    <textarea name="content" minlength="2" [(ngModel)]="editNoteItem.content" required></textarea>
+
+    <div *ngIf="noteId !== 0" class="edit-note__delete-button-wrapper">
+      <button type="button" (click)="deleteNote()">Удалить</button>
+    </div>
+    <div class="edit-note__save-button-wrapper">
+      <button type="submit" [disabled]="editNoteForm.invalid">
+        <span *ngIf="this.noteId === 0; else saveBlock">Создать</span>
+        <ng-template #saveBlock>Сохранить</ng-template>
+      </button>
+    </div>
+  </form>
+
+</div>

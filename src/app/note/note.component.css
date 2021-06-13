@@ -1,0 +1,42 @@
+
+h2 {
+  margin: 0 0 5px 0;
+  padding: 0;
+  height: 1em;
+  text-align: center;
+  overflow: hidden;
+}
+
+p {
+  margin: 0 0 10px 0;
+  padding: 15px;
+  border: 1px solid #000;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+p::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  height: 0.5em;
+  width: 100%;
+  background: linear-gradient(180deg, transparent, #ffffff 90%);
+}
+
+span {
+  max-height: 100%;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}

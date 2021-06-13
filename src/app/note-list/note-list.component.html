@@ -1,0 +1,10 @@
+<h1>Блог</h1>
+<ul>
+  <li *ngFor="let noteDataItem of noteDataItems">
+    <app-note [noteItem]="noteDataItem">
+    </app-note>
+  </li>
+</ul>
+<p *ngIf="noteDataItems.length == 0">Нет записей. Нажмите кнопку 'Добавить', чтобы создать запись.</p>
+<a class="note__list__create-note-link nav-link" [routerLink]="['edit-note', '']">+ Добавить</a>
+

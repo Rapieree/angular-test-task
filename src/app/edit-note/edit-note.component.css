@@ -1,0 +1,45 @@
+.edit-note {
+  padding: 30px 30px 100px 30px;
+}
+
+.edit-note__back-link {
+  display: block;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+label {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+textarea {
+  margin-bottom: 30px;
+  width: 100%;
+  min-height: 300px;
+  max-height: 300px;
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.edit-note__save-button-wrapper {
+  margin-left: auto;
+}
